@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "harleybrito-dev": {
+      "hosting": {
+        "harley-dev": [
+          "harleybrito-dev"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "harleybrito-dev"
+  }
+}
