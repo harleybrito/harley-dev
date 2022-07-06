@@ -1,4 +1,4 @@
-<div class="container d-flex flex-column vh-100">
+<div class="container d-flex flex-column full-screen">
   <nav class="navbar navbar-expand-lg pt-5">
     <div class="container-fluid">
       <svg
@@ -145,8 +145,24 @@
           dispositivos móveis com Flutter, e atualmente atuo como desenvolvedor
           Angular na Globo.
         </p>
-        <br />
-        <p>
+        <a href="https://github.com/harleydebrito/harley-dev" target="_blank">
+          <button class="btn bg-dark text-red">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="22"
+              fill="currentColor"
+              class="bi bi-git"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.031 1.031 0 0 0 0-1.457"
+              />
+            </svg>
+            Código desta página
+          </button>
+        </a>
+
+        <p class="pt-3">
           Abaixo você pode conferir alguns sistemas que desenvolvi para a web:
         </p>
         <div class="row row-cols-1 row-cols-lg-2" *ngIf="loadingSystems">
@@ -196,10 +212,10 @@
           </button>
         </div>
         <div
-          class="row row-cols-1 row-cols-xl-2"
+          class="d-flex flex-column align-items-stretch"
           *ngIf="systems != undefined && !loadingSystems"
         >
-          <div class="col" *ngFor="let system of systems">
+          <div *ngFor="let system of systems">
             <div class="my-2 p-3 system-container">
               <h5 class="text-black">
                 {{ system.name }}
@@ -209,13 +225,13 @@
               </p>
               <a [href]="system.url" target="_blank">
                 <button
-                  class="btn btn-outline-dark text-danger border-danger me-2"
+                  class="btn btn-outline-dark text-red border-danger me-2"
                 >
                   Testar
                 </button>
               </a>
               <a [href]="system.gitUrl" target="_blank">
-                <button class="btn bg-dark text-danger">
+                <button class="btn bg-dark text-red">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="22"
@@ -233,6 +249,44 @@
             </div>
           </div>
         </div>
+        <!-- <div
+          class="row row-cols-1 row-cols-xl-2 d-flex align-items-stretch"
+          *ngIf="systems != undefined && !loadingSystems"
+        >
+          <div class="col" *ngFor="let system of systems">
+            <div class="my-2 p-3 system-container">
+              <h5 class="text-black">
+                {{ system.name }}
+              </h5>
+              <p class="text-black fs-13">
+                {{ system.description }}
+              </p>
+              <a [href]="system.url" target="_blank">
+                <button
+                  class="btn btn-outline-dark text-red border-danger me-2"
+                >
+                  Testar
+                </button>
+              </a>
+              <a [href]="system.gitUrl" target="_blank">
+                <button class="btn bg-dark text-red">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="22"
+                    fill="currentColor"
+                    class="bi bi-git"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.031 1.031 0 0 0 0-1.457"
+                    />
+                  </svg>
+                  Código
+                </button>
+              </a>
+            </div>
+          </div>
+        </div> -->
       </div>
       <div class="col-md-6">
         <div class="h-500px">
